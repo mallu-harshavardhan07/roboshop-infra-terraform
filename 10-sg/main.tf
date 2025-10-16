@@ -5,6 +5,6 @@ module "sg"{
 
     sg_name = "my_sg"
     sg_description = "creating sg module for frontend"
-    vpc_id = data.aws_ssm_prameter.vpc_id.value
+    vpc_id = data.aws_ssm_parameter.vpc_id.value
 
 }

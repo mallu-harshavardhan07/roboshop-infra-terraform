@@ -11,6 +11,3 @@ variable "sg_description" {
   type =string
   default = "creating for frontend"
 }
-variable "vpc_id" {
-  type=string 
-}

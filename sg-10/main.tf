@@ -4,7 +4,7 @@ module "create_sg" {
     env = var.env
     sg_name = "frontend"
     sg_description = var.sg_description
-    vpc_id = data.aws_ssm_parameter.get_vpc_id
+    vpc_id = data.aws_ssm_parameter.get_vpc_id.value
 
 
 }

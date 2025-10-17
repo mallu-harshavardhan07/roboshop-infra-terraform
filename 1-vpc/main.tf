@@ -18,3 +18,6 @@ module "create_vpc" {
 #  5) Private_cidr_subnet - private_cidr_subnet
 #  6) Database_cidr_subnet- database_cidr_subnet
 #  7) is_peering_required value
+
+# In main vpc module gives us (vpc_id) as output 
+

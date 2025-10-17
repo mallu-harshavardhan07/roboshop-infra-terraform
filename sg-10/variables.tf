@@ -6,6 +6,7 @@ variable "env" {
 }
 variable "sg_name" {
   type = string
+  default = "frontend"
 }
 variable "sg_description" {
   type =string

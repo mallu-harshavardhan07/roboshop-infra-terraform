@@ -16,6 +16,8 @@ module "create_sg" {
 # 4) sg_description
 # 5) vpc_id
 
+#  This below code is written in main module 
+#  We get output sg_id  from the module  
 /* output "sg_id" {
     value = aws_security_group.allow_tls.id
   

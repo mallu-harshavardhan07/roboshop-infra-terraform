@@ -1,5 +1,5 @@
 module "create_vpc" {
-    source = "git::https://github.com/mallu-harshavardhan07/VPC-Terraform.git?ref=main"
+    source = "git::https://github.com/mallu-harshavardhan07/VPC-Terraform.git//vpc_module?ref=main"
     project = "practice"
     env = "prod"
     vpc_cidr_block = "10.0.0.0/16"

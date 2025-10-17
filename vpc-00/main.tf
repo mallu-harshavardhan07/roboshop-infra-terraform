@@ -1,4 +1,4 @@
-module "create_vpc" {
+/* module "create_vpc" {
     source = "git::https://github.com/mallu-harshavardhan07/VPC-Terraform.git//vpc_module?ref=main"
     project = "practice"
     env = "prod"
@@ -9,7 +9,7 @@ module "create_vpc" {
     is_peering_required = false
 
   
-}
+} */
 #  Inputs required
 #  provide source of the module first 
 #  1) Name of the Project - project
@@ -19,3 +19,15 @@ module "create_vpc" {
 #  5) Private_cidr_subnet - private_cidr_block
 #  6) Database_cidr_subnet- database_cidr_block
 #  7) is_peering_required value
+
+module "vpc" {
+    source = "git::https://github.com/mallu-harshavardhan07/VPC-Terraform.git//vpc_module?ref=main"
+    project = "roboshop"
+    env = "dev"
+    vpc_cidr_block =  "10.0.0.0/16"
+    public_cidr_subnet = ["10.0.1.0/24","10.0.2.0/24"]
+    private_cidr_subnet = ["10.0.11.0/24","10.0.12.0/24"]
+    database_cidr_subnet = ["10.0.21.0/24","10.0.22.0/24"]
+    is_peering_required = true
+    
+}

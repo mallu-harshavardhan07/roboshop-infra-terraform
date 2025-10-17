@@ -2,7 +2,7 @@ module "create_sg" {
     source = "git::https://github.com/mallu-harshavardhan07/security_group-module.git?ref=main"
     project = var.project
     env = var.env
-    sg_name = "frontend"
+    sg_name = var.sg_name
     sg_description = var.sg_description
     vpc_id = data.aws_ssm_parameter.get_vpc_id.value
 
